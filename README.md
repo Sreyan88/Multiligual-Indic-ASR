@@ -6,7 +6,7 @@ There was some additional data which we used.
 
 1. Umesh1: this data was provided to us by IITM speech labs headed by professor Umesh. This contains a total of 130 hours of Hindi audio, out of which 50 hours of audio is transcribed.
 2. LDC: this data was obtained from [ILDC](https://data.ldcil.org/speech/speech-raw-corpus/hindi-raw-speech-corpus). This is a raw corpus. There is approx 118 hours of audio with noisy/faulty transcriptions. For eg: the transcription was "बुधवार", the speaker repeats it 3 times in the audio.<br>Moreover the transcriptions were not aligned i.e. 5 minute of audio had 200-500 word transcription. This was not suitable to train or test an E2E model. Hence, we used [aeneas](https://github.com/readbeyond/aeneas) for forced alignment.
-<br>We also wrote a small code which converts all the numbers to its word form. It handles ordinals and cardinals both. For eg: it will "रामप्रसाद के 2 बेटे" → "रामप्रसाद के दो बेटे", and "रामप्रसाद कि 13वी" → "रामप्रसाद कि तेरवी".
+<br>We also wrote a small code which converts all the numbers to its word form. It handles ordinals and cardinals both. For eg: it will "रामप्रसाद के 2 बेटे" → "रामप्रसाद के दो बेटे", and "रामप्रसाद कि 13वी" → "रामप्रसाद कि तेरवी". (```script/num_2_word/inum_wrd.py```)
 <br>But sometimes transcriptions were incorrect in the first place. So this data is technically not a gold standard.
 
 ## Models
